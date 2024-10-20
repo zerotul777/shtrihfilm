@@ -1,0 +1,44 @@
+.swiper {
+	width: 100%;
+
+	&-wrapper {
+		padding: 0;
+	}
+
+	&-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&-pagination {
+		display: flex;
+		justify-content: center;
+	}
+
+	&-pagination-bullet {
+		transition: background-color $transition-300, opacity $transition-300;
+	}
+
+	&-button-next,
+	&-button-prev {
+		transition: transform $transition-300;
+
+		&:not(:disabled):hover,
+		&:focus-visible {
+				transform: scale(1.3);
+			}
+	}
+
+	&-button-next::after,
+	&-button-prev::after {
+		@include vp-1023 {
+			opacity: 0.5;
+			font-size: 22px;
+		}
+	}
+}
+
+:root {
+	--swiper-theme-color: #ffffff;
+}

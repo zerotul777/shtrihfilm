@@ -1,0 +1,52 @@
+.modal-card {
+  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+	padding: 40px 0;
+	gap: 20px;
+
+	@include vp-1023 {
+		padding: 50px 0;
+		gap: 10px;
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 30px;
+		line-height: 36px;
+		color: #ffffff;
+		text-transform: uppercase;
+
+		@include vp-1023 {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+
+	&__img {
+    height: 100%;
+    padding: 20px 60px 40px;
+    object-fit: contain;
+
+		@include vp-1023 {
+			padding: 20px 0 40px;
+		}
+	}
+
+	&__text {
+		display: grid;
+		margin: 0;
+		font-family: $ff-mulish;
+		font-size: 20px;
+		line-height: 28px;
+		color: #ffffff;
+		text-align: center;
+
+		@include vp-1023 {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}

@@ -1,0 +1,188 @@
+.project-card {
+	display: flex;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	outline: none;
+
+	&:not(:disabled):hover,
+	&:focus-visible {
+		.project-card__name::before {
+			opacity: 0;
+		}
+
+		.project-card__name::after {
+			width: 100%;
+		}
+
+		.project-card__img {
+			transform: scale(1.1);
+			filter: brightness(0.6);
+		}
+
+		.project-card__content {
+			transform: translate(-50%, -50%) scale(1.2);
+
+			@include vp-1023 {
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.project-card__text {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.project-card__more {
+			opacity: 1;
+			transform: translate(-50%, 0) scale(1.2);
+		}
+	}
+
+	&__img {
+		min-height: 400px;
+		max-height: 780px;
+		transition: transform $transition-300, filter $transition-300;
+
+		@include vp-1023 {
+			min-height: 240px;
+			filter: brightness(0.6);
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -10%) scale(1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		gap: 50px;
+		transition: transform $transition-300;
+		padding: 20px;
+
+		@include vp-1023 {
+			width: 90%;
+			gap: 20px;
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&__name {
+		margin: 0;
+		font-weight: 300;
+		font-size: 32px;
+		line-height: 40px;
+		color: $color-white;
+		padding: 0 0 20px;
+		white-space: nowrap;
+		text-transform: uppercase;
+		position: relative;
+
+
+		@include vp-1023 {
+			font-size: 20px;
+			line-height: 28px;
+			padding: 0 0 10px;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 120%;
+			height: 200%;
+			border-radius: 15px;
+			background-color: $color-black;
+			opacity: 0.4;
+			z-index: -1;
+			transition: opacity $transition-300;
+
+			@include vp-1023 {
+				display: none;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 40%;
+			height: 2px;
+			background-color: $color-white;
+			transition: width $transition-300;
+
+			@include vp-1023 {
+				width: 100%;
+				height: 1px;
+			}
+		}
+	}
+
+	&__text {
+		margin: 0;
+		display: grid;
+		gap: 10px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 28px;
+		color: $color-white;
+		text-align: center;
+		opacity: 0;
+		transition: opacity $transition-300, transform $transition-300;
+		transform: translateY(100%);
+
+		@include vp-1023 {
+			gap: 2px;
+			opacity: 1;
+			font-size: 12px;
+			line-height: 20px;
+			transform: translateY(0);
+		}
+
+		@include vp-767 {
+			font-size: 10px;
+			line-height: 15px;
+		}
+	}
+
+	&__more {
+		position: absolute;
+		bottom: 15%;
+		left: 50%;
+		transform: translate(-50%, 200%) scale(0.7);
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 28px;
+		color: $color-white;
+		text-align: center;
+		opacity: 0;
+		transition: opacity $transition-300, transform $transition-300;
+		border-bottom: 1px solid $color-white;
+		z-index: 10;
+
+		@include vp-1023 {
+			bottom: 10%;
+			font-size: 10px;
+			line-height: 24px;
+			opacity: 1;
+			transform: translate(-50%, 0) scale(1.2);
+		}
+
+		&:has(.spinningSquaresG) {
+			border: none;
+			display: grid;
+			gap: 10px;
+
+			@include vp-1023 {
+				gap: 2px;
+			}
+		}
+	}
+}

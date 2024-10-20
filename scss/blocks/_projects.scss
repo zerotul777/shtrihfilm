@@ -1,0 +1,61 @@
+.projects {
+	padding: 50px 0 80px;
+	background-color: #e0dede;
+
+	@include vp-1023 {
+		padding: 30px 0 80px;
+	}
+
+	@include vp-767 {
+		padding: 30px 0 40px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+
+		@include vp-1023 {
+			gap: 30px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-weight: 400;
+		color: $color-black;
+		font-size: 54px;
+		line-height: 60px;
+
+		@include vp-1023 {
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		@include vp-1023 {
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		flex: 1 1 calc(50% - 30px);
+
+		@include vp-1023 {
+			flex: 1 1 calc(50% - 10px);
+		}
+
+		@include vp-767 {
+			flex: 1 1 100%;
+		}
+	}
+}

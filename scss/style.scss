@@ -1,0 +1,27 @@
+/* Global */
+/* ------------------------------------ */
+@import "global/_normalize.scss";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_fonts";
+@import "global/_reboot";
+@import "global/_container";
+@import "global/_visually-hidden";
+
+
+/* Blocks */
+/* ------------------------------------ */
+@import "blocks/_animation";
+@import "blocks/_hero";
+@import "blocks/_burger";
+@import "blocks/_about";
+@import "blocks/_projects";
+@import "blocks/_project-card";
+@import "blocks/_spinningSquaresG";
+@import "blocks/_contacts";
+@import "blocks/_contact-card";
+@import "blocks/_modal";
+@import "blocks/_modal-card";
+@import "blocks/_swiper";
+@import "blocks/_footer";
+

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="mail">
+  <path fill="#5e35b1" stroke="#5e35b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25,8.65v18.1a3.21,3.21,0,0,0,3.39,3H26.36a3.21,3.21,0,0,0,3.39-3V8.65Z"></path>
+  <path fill="#7c4dff" d="M26.75,1.25H5.25a4,4,0,0,0-4,4V9.88a4,4,0,0,0,2.48,3.7l11.89,4.89a1.07,1.07,0,0,0,.76,0l11.89-4.89h0a4,4,0,0,0,2.48-3.7V5.25A4,4,0,0,0,26.75,1.25Z"></path>
+</svg>
