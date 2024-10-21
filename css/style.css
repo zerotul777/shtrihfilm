@@ -579,7 +579,8 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .hero {
-  background-image: url("/images/bg/img-k5s16-21-desktop.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("images/bg/img-k5s16-21-desktop.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("images/bg/img-k5s16-21-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -598,8 +599,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 1023px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("/images/bg/img-k5s16-06-tablet.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("/images/bg/img-k5s16-06-tablet.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("images/bg/img-k5s16-06-tablet.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("images/bg/img-k5s16-06-tablet.jpg");
   }
 }
 .hero__top {
