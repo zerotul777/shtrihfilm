@@ -542,6 +542,22 @@ input[type=search]::-webkit-search-results-decoration {
     width: calc(100% - 60px);
   }
 }
+@-webkit-keyframes fadeInWidthMobile {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 20px);
+  }
+}
+@keyframes fadeInWidthMobile {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 20px);
+  }
+}
 @-webkit-keyframes fadeInHeigth {
   0% {
     height: 0;
@@ -579,11 +595,8 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .hero {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("../../images/bg/img-k5s16-desktop.webp");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../../images/bg/img-k5s16-desktop.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -596,12 +609,15 @@ input[type=search]::-webkit-search-results-decoration {
           filter: blur(50px);
   -webkit-animation: blur linear 0.9s forwards;
           animation: blur linear 0.9s forwards;
+  position: relative;
 }
-@media (max-width: 1023px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("../../images/bg/img-k5s16-tablet.webp");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../../images/bg/img-k5s16-tablet.webp");
-  }
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .hero__top {
   width: 100%;
@@ -618,6 +634,11 @@ input[type=search]::-webkit-search-results-decoration {
   gap: 20px;
   position: relative;
 }
+@media (max-width: 767px) {
+  .hero__top {
+    padding: 10px;
+  }
+}
 .hero__top::after {
   position: absolute;
   content: "";
@@ -630,6 +651,12 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #ffffff;
   -webkit-animation: fadeInWidth ease-in-out 0.8s forwards 1s;
           animation: fadeInWidth ease-in-out 0.8s forwards 1s;
+}
+@media (max-width: 767px) {
+  .hero__top::after {
+    -webkit-animation: fadeInWidthMobile ease-in-out 0.8s forwards 1s;
+            animation: fadeInWidthMobile ease-in-out 0.8s forwards 1s;
+  }
 }
 .hero__logo {
   display: -webkit-box;
@@ -1459,7 +1486,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .spinningSquaresG {
-  background-color: #000000;
+  background-color: #ffffff;
   width: 14px;
   height: 14px;
   animation-name: bounce_spinningSquaresG;

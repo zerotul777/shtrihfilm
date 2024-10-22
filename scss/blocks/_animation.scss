@@ -48,6 +48,15 @@
 	}
 }
 
+@keyframes fadeInWidthMobile {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: calc(100% - 20px);
+	}
+}
+
 @keyframes fadeInHeigth {
 	0% {
 		height: 0;
