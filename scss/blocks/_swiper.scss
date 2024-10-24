@@ -17,7 +17,7 @@
 	}
 
 	&-pagination-bullet {
-		transition: background-color $transition-300, opacity $transition-300;
+		transition: all $transition-300;
 	}
 
 	&-button-next,
