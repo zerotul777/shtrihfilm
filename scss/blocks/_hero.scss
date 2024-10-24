@@ -1,8 +1,4 @@
 .hero {
-<<<<<<< Updated upstream
-=======
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
->>>>>>> Stashed changes
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -10,7 +6,6 @@
 	animation: blur linear 0.9s forwards;
 	position: relative;
 
-<<<<<<< Updated upstream
 	&::before {
 		content: '';
 		position: absolute;
@@ -18,8 +13,6 @@
 		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
 	}
 
-=======
->>>>>>> Stashed changes
 	&__bg {
 		position: absolute;
 		top: 0;
