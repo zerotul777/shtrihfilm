@@ -595,6 +595,11 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .hero {
+<<<<<<< Updated upstream
+=======
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+>>>>>>> Stashed changes
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,6 +614,7 @@ input[type=search]::-webkit-search-results-decoration {
           animation: blur linear 0.9s forwards;
   position: relative;
 }
+<<<<<<< Updated upstream
 .hero::before {
   content: "";
   position: absolute;
@@ -616,6 +622,8 @@ input[type=search]::-webkit-search-results-decoration {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
 }
+=======
+>>>>>>> Stashed changes
 .hero__bg {
   position: absolute;
   top: 0;
