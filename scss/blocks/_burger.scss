@@ -1,5 +1,4 @@
 .burger {
-	display: none;
 	background-color: transparent;
 	padding: 0;
 	border: none;
@@ -12,13 +11,11 @@
 	$root: &;
 
 	@include vp-767 {
-		display: flex;
-		opacity: 0;
-		transform: translateY(-200px);
-		animation: fadeInDown $transition-800 forwards 1s;
+		width: 32px;
+		height: 32px;
 	}
 
-	.hero--open & {
+	.header--open & {
 		#{$root}__line {
 			top: calc(50% - 2px);
 			transform: translate(-50%, 0) rotate(45deg);
@@ -40,8 +37,17 @@
 		background-color: $color-white;
 		transition: top $transition-300 0.3s, transform $transition-300;
 
+		@include vp-1023 {
+			top: calc(50% - 6px);
+			background-color: $color-black;
+		}
+
 		&--bottom {
 			top: calc(50% + 6px);
+
+			@include vp-1023 {
+				top: calc(50% + 4px);
+			}
 		}
 	}
 }
