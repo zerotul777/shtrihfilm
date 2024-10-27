@@ -8,5 +8,12 @@
   }
 
   &__video {
+    width: 1280px;
+    height: 720px;
+
+    @include vp-767 {
+      width: 100%;
+      height: auto;
+    }
   }
 }

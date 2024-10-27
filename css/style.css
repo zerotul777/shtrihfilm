@@ -2126,6 +2126,17 @@ input[type=search]::-webkit-search-results-decoration {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.k5s16__video {
+  width: 1280px;
+  height: 720px;
+}
+@media (max-width: 767px) {
+  .k5s16__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .modal {
   opacity: 0;
   pointer-events: none;
