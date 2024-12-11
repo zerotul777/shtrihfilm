@@ -24,9 +24,9 @@ body {
 main {
   flex-grow: 1;
 
-  @include vp-1023 {
-    padding: 75px 0 0;
-  }
+  // @include vp-1023 {
+  //   padding: 75px 0 0;
+  // }
 }
 
 img {

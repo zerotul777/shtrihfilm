@@ -201,6 +201,7 @@
 		background-color: rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(10px);
 		outline: none;
+		transition: color $transition-300, background-color $transition-300;
 
 		@include vp-767 {
 			min-width: 165px;

@@ -28,6 +28,31 @@ window.addEventListener('scroll', () => {
 	heroBg.style.transform = `scale(${scale})`;
 });
 
+
+(function () {
+  // Выбираем все элементы с классом 'animated'
+  var elements = document.querySelectorAll('.animated');
+
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      // Проверяем, есть ли функция getCurrentAnimationPreference и не отключены ли анимации
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+        return;
+      }
+
+      // Если элемент видим на экране, добавляем класс 'is-animated'
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fadein-animation');
+      }
+    });
+  });
+
+  // Наблюдаем за каждым элементом с классом 'animated'
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+})();
+
 // document.addEventListener('DOMContentLoaded', () => {
 // 	const projectCards = document.querySelectorAll('.project-card');
 // 	const modal = document.querySelector('.modal');

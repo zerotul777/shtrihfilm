@@ -94,3 +94,26 @@
     opacity: 0;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+ 
+.fadein-animation {
+	opacity: 0;
+	transform: translate3d(0, 100px, 0);
+  animation: fadeIn ease-in-out 0.8s forwards;
+
+	// @include vp-1023 {
+	// 	opacity: 1;
+	// 	transform: none;
+	// 	animation: none;
+	// }
+}
