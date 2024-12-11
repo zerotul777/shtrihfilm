@@ -2178,6 +2178,25 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 
+.k5s16 {
+  padding: 120px 0 0;
+}
+.k5s16__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.k5s16__img--xl {
+  grid-column: span 2;
+}
+
 .modal {
   opacity: 0;
   pointer-events: none;
